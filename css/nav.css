@@ -6,3 +6,27 @@ nav {
 		position: absolute;
 	}
 }
+
+.nav_btn {
+	color: #186693;
+	display: inline-block;
+}
+
+@media (min-width: 900px) { 
+	.nav_btn {
+		color: #186693;
+		display: inline-block;
+	}
+}
+
+.nav_btn {
+	color: #186693;
+	display: inline-block;
+}
+
+@media (min-width: 900px) { 
+	.nav_btn {
+		color: #186693;
+		display: inline-block;
+	}
+}

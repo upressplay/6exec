@@ -20,24 +20,12 @@ var site = {
         site.trace("site initialize");
 
         this.user_agent = navigator.appName;
-        //alert("navigator.appName = "+navigator.appName+" navigator.appVersion = "+navigator.appVersion+" navigator.userAgent = "+navigator.userAgent)
-
 
         this.device_detect();
 
         this.site_url = window.location.hostname;
 
-        if(this.site_url == "rockbox.dev.tvg.la" || this.site_url == "rockbox.dev" || this.site_url == "staging.hardrockbox.com" || this.site_url == "origin.hardrockbox.com" ) {
-            this.debugging = true;
-        }
-
         if(this.query_string('debug_site') == "true") this.debugging = true;
-        if(this.query_string('testing') == "true") this.testing = true;
-
-        this.pin = site.query_string('pin');
-        this.twitter_t = site.query_string('t');
-        this.twitter_o = site.query_string('oauth_token');
-        this.twitter_v = site.query_string('oauth_verifier');
         
         this.trace("this.site_url = "+this.site_url)
         this.trace("this.cdn = "+this.cdn)
@@ -56,11 +44,6 @@ var site = {
     	var thisobj = this;
 
     	site.trace("site render");
-
-        site.api.initialize();
-        site.controller.initialize();
-        site.home.initialize();
-        site.aggregator.initialize();
 
         $('#site_holder').css({
             "display":"block"
@@ -168,9 +151,6 @@ var site = {
         
     },
 
-    
-
-    
     window_width : function () {
     	var value = Math.round($('#site_holder').innerWidth());
     	//if(value < this.max_width) value = value - 10;
