@@ -26,11 +26,11 @@
 	<meta property="og:image" content="<?php echo $meta_img; ?>" />
   	
 
- 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
- 	<link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+ 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'> -->
 
 	<link rel="stylesheet" href="css/site.css">
+	<link rel="stylesheet" href="css/nav.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -68,7 +68,7 @@
 
 	
 	
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/jquery-2.2.3.min.js"></script>
   	<script src="js/lib/TweenMax.min.js"></script>
   	<script src="js/lib/ScrollToPlugin.min.js"></script>
   	

@@ -4,7 +4,7 @@ body {
 	height: 100%;
 	margin: 0;
 	overflow: hidden;
-	font-family: 'montserratultra_light', sans-serif;
+	font-family: 'sitefont', serif;
 	color: #000;
 	font-size: 10px;
 	word-spacing: normal;
@@ -46,6 +46,37 @@ p {
 	-webkit-margin-end: 0px;
 }
 
+@font-face {
+    font-family: 'sitefont';
+    src: url('fonts/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a:link {
+	border: none;
+	color: #afafaf;
+	text-decoration: underline;
+}
+
+a:visited {
+	border: none;
+	color: #afafaf;
+	text-decoration: underline;
+}
+
+a:active {
+	border: none;
+	color: #afafaf;
+	text-decoration: underline;
+}
+
+a:hover {
+	border: none;
+	color: #fff;
+	text-decoration: none;
+}
+
 
 .screen-reader-text { /* Reusable, toolbox kind of class */
   	position: absolute;
@@ -75,7 +106,6 @@ p {
 #site_content {
 	float: left;
 	width: 100%;
-	min-height: 150rem;
 	
 }
 

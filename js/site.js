@@ -57,9 +57,7 @@ var site = {
 
         TweenMax.to($('#site_holder'), .5, {opacity:1, overwrite:2}); 
 
-        $('html').css({
-            "font-size":this.size()+"px"
-        });
+        
 
         
     	this.resize();
@@ -147,6 +145,10 @@ var site = {
 		} else {
 
 		}
+
+        $('html').css({
+            "font-size":this.size()+"px"
+        });
     
         
     },
