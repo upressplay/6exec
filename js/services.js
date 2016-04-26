@@ -1,26 +1,25 @@
 $(document).ready(function(){  
 
-    site.home.initialize();
+    site.services.initialize();
     
 }); 
 
-site.home = {
+site.services = {
 
-    id:"home",
+    id:"services",
     data:[],
     current:-1,
     new:0,
-    loading:false,
     initialize : function () {
 
         var thisobj = this;
 
         $( window ).resize(function() { thisobj.resize(); });
 
-        this.data.push({img:"images/home_01.jpg", loaded:false});
-        this.data.push({img:"images/home_02.jpg", loaded:false});
-        this.data.push({img:"images/home_03.jpg", loaded:false});
-        this.data.push({img:"images/home_04.jpg", loaded:false});
+        this.data.push({icon:"train", title:"", desc:"", expand:"FINANCIAL MANAGEMENT: Financial and SEC Reporting. Budgeting, Planning, and Forecasting. IFRS / Convergence Financial Analysis.Audit and Governance. (Information Technology, Operational, and Financial) Domestic, International, and State / Local Tax Compliance.Business Process Improvement. Cost Accounting"});
+        this.data.push({icon:"train", title:"", desc:"", expand:""});
+        this.data.push({icon:"train", title:"", desc:"", expand:""});
+        this.data.push({icon:"train", title:"", desc:"", expand:""});
 
         this.render();
 

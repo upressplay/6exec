@@ -1,0 +1,15 @@
+
+#services {
+	width: 100%;
+}
+
+#services_title {
+	padding: 2% 5%;
+	width: 90%;
+	background-color: #414243;
+}
+#services_holder {
+	background-color: #1e1e1e;
+	padding: 0 5%;
+	width: 90%;
+}

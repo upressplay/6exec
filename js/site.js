@@ -3,7 +3,7 @@ var site = {
 	max_width:1400,
 	mobile_width: 900,
 	tracking: true,
-	debugging:false,
+	debugging:true,
     testing:false,
 	cdn:"",
 	site_url:"",

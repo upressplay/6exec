@@ -26,11 +26,15 @@
 	<meta property="og:image" content="<?php echo $meta_img; ?>" />
   	
 
- 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
- 	<!-- <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'> -->
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+ 	<link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="css/site.css">
 	<link rel="stylesheet" href="css/nav.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/apply.css">
+	<link rel="stylesheet" href="css/about.css">
+	<link rel="stylesheet" href="css/services.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -41,22 +45,20 @@
 
 <body>
 
-	
+	<?php 
+		include 'includes/nav.php';
+	?>
 	<div id="site_holder">
-		<?php 
-			include 'includes/nav.php';
-		?>
+		
 		<div id="site_container">
 			<div id="site_content">
 			<?php 
-				include 'includes/header_anim.php';
+				include 'includes/header.php';
+				include 'includes/apply.php';
+				include 'includes/about.php';
+				include 'includes/services.php';
 			?>
-				
 			</div><!-- site_content -->
-			
-			
-			
-
 			
 
 		</div><!-- site_container -->
@@ -73,6 +75,7 @@
   	<script src="js/lib/ScrollToPlugin.min.js"></script>
   	
   	<script src="js/site.js"></script>
+  	<script src="js/home.js"></script>
   	
 </body>
 </html>
