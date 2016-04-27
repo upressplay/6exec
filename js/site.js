@@ -1,6 +1,6 @@
 
 var site = {
-	max_width:1400,
+	max_width:1600,
 	mobile_width: 900,
 	tracking: true,
 	debugging:true,

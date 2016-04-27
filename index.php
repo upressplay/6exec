@@ -76,6 +76,6 @@
   	
   	<script src="js/site.js"></script>
   	<script src="js/home.js"></script>
-  	
+  	<script src="js/services.js"></script>
 </body>
 </html>
