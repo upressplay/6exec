@@ -14,48 +14,99 @@
 	float: left;
 	background-color: #1e1e1e;
 	width: 100%;
+	padding: 5rem 0;
 }
 
 .service {
 	width:100%;
+	height:30rem;
 	float:left;
 	overflow: hidden;
 }
 
+@media (min-width: 900px) { 
+	.service {
+		width:100%;
+		height:20rem;
+		float:left;
+		overflow: hidden;
+	}
+}
+
 .service_holder {
 	position:relative;
+	padding: 2rem 0;
+}
+
+@media (min-width: 900px) { 
+	.service_holder {
+		position:relative;
+		padding: 2rem 0;
+	}
 }
 
 
-
 .services_circle {
-	width:15rem;
-	height:15rem;
+	width:13rem;
+	height:13rem;
 	font-size: 7rem;
 	line-height: 7rem;
 	display: inline-block;
 	vertical-align: middle;
-	margin: 2rem 5rem 2rem 10rem;	
+	margin: 2rem 3rem 2rem 5rem;	
+}
+
+@media (min-width: 900px) { 
+	.services_circle {
+		width:15rem;
+		height:15rem;
+		font-size: 7rem;
+		line-height: 7rem;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 2rem 7rem 2rem 9rem;	
+	}
+
 }
 
 .service_info {
 	display: inline-block;
 	vertical-align: middle;
-	width:90rem;
+	width:52rem;
+}
+
+@media (min-width: 900px) { 
+	.service_info {
+		display: inline-block;
+		vertical-align: middle;
+		width:105rem;
+	}
+
 }
 
 .service_btn {
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 7rem;
-	line-height: 7rem;
+	font-size: 9rem;
+	line-height: 9rem;
 	color:#0079bd;
 	cursor: pointer;
-	margin-left: 2rem;	
-	margin-right: 10rem;	
+	margin-left: 3rem;	
+	margin-right: 5rem;	
 }
 
-
+@media (min-width: 900px) { 
+	.service_btn {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 9rem;
+		line-height: 9rem;
+		color:#0079bd;
+		cursor: pointer;
+		margin-left: 5rem;	
+		margin-right: 7rem;	
+	}
+}
 
 
 .service_title {
@@ -64,11 +115,29 @@
 	line-height: 5rem;
 }
 
+@media (min-width: 900px) { 
+	.service_title {
+		color:#fff;
+		font-size: 3.6rem;
+		line-height: 5rem;
+	}
+}
+
+
 .service_desc {
 	color:#a09f9f;
 	font-size: 2.1rem;
 	line-height: 3rem;
 	font-family: Arial, san-serif;
+}
+
+@media (min-width: 900px) { 
+	.service_desc {
+		color:#a09f9f;
+		font-size: 2.1rem;
+		line-height: 3rem;
+		font-family: Arial, san-serif;
+	}
 }
 
 .service_expand {
@@ -78,6 +147,27 @@
 	background-color: #0079bd;
 	height:100%;
 	width:100%;
+	padding: 2rem 0;
+}
+
+@media (min-width: 900px) { 
+	.service_expand {
+		position:absolute;
+		top:0px;
+		left:100%;
+		background-color: #0079bd;
+		height:100%;
+		width:100%;
+		padding: 2rem 0;
+	}
+}
+
+.service_expand_holder {
+	width: 100%;
+	height :100%;
+	display: table;
+	vertical-align: middle;
+	float: left;
 }
 .expand {
 	color:#000;

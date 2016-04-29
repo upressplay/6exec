@@ -22,7 +22,7 @@
 					</div><!-- service_desc -->
 				</div><!-- service_info -->
 				<div btnid="0" class="service_btn">
-					<div class="fa fa-arrow-circle-right"></div>
+					<div class="fa fa-chevron-circle-right"></div>
 				</div><!-- service_btn -->
 				<div class="service_expand">
 
@@ -39,7 +39,7 @@
 						</div><!-- service_desc -->
 					</div><!-- service_info -->
 					<div btnid="0" class="service_btn expand">
-						<div class="fa fa-arrow-circle-right"></div>
+						<div class="fa fa-chevron-circle-right"></div>
 					</div><!-- service_btn -->
 
 				</div><!-- service_expand -->
@@ -64,7 +64,7 @@
 					</div><!-- service_desc -->
 				</div><!-- service_info -->
 				<div btnid="1" class="service_btn">
-					<div class="fa fa-arrow-circle-right"></div>
+					<div class="fa fa-chevron-circle-right"></div>
 				</div><!-- service_btn -->
 				<div class="service_expand">
 
@@ -81,7 +81,7 @@
 						</div><!-- service_desc -->
 					</div><!-- service_info -->
 					<div btnid="1" class="service_btn expand">
-						<div class="fa fa-arrow-circle-right"></div>
+						<div class="fa fa-chevron-circle-right"></div>
 					</div><!-- service_btn -->
 
 				</div><!-- service_expand -->
@@ -106,7 +106,7 @@
 					</div><!-- service_desc -->
 				</div><!-- service_info -->
 				<div btnid="2" class="service_btn">
-					<div class="fa fa-arrow-circle-right"></div>
+					<div class="fa fa-chevron-circle-right"></div>
 				</div><!-- service_btn -->
 				<div class="service_expand">
 
@@ -123,12 +123,54 @@
 						</div><!-- service_desc -->
 					</div><!-- service_info -->
 					<div btnid="2" class="service_btn expand">
-						<div class="fa fa-arrow-circle-right"></div>
+						<div class="fa fa-chevron-circle-right"></div>
 					</div><!-- service_btn -->
 
 				</div><!-- service_expand -->
 			</div><!-- service_holder -->
-		</div><!-- service_1 -->
+		</div><!-- service_2 -->
+
+		<div id="service_3" class="service">
+			<div class="service_holder">
+				<div class="circle_blue services_circle">
+					<div class="circle_content">
+						<div class="circle_txt">
+							<div class="fa fa-wrench" aria-hidden="true"></div>
+						</div><!-- circle_txt -->
+					</div><!-- circle_content -->
+				</div><!-- services_circle -->
+				<div class="service_info">
+					<div class="service_title">
+						retained search°
+					</div><!-- service_title -->
+					<div class="service_desc">
+						6 Degrees provides organizations with skilled senior-level accounting, finance and business systems professionals on a project basis. We can find your ace in the areas of:  Financial Planning Analysis, financial reporting, business Process engineering, Financial optimization, and Risk / Compliance and information technology.
+					</div><!-- service_desc -->
+				</div><!-- service_info -->
+				<div btnid="3" class="service_btn">
+					<div class="fa fa-chevron-circle-right"></div>
+				</div><!-- service_btn -->
+				<div class="service_expand">
+					<div class="service_expand_holder">
+					<div class="circle_black services_circle">
+						<div class="circle_content">
+							<div class="circle_txt">
+								<div class="fa fa-rocket" aria-hidden="true"></div>
+							</div><!-- circle_txt -->
+						</div><!-- circle_content -->
+					</div><!-- services_circle -->
+					<div class="service_info">
+						<div class="service_desc expand">
+							Entry, Mid and C level financial management: Tax, Audit, Analysis, Reporting, Treasury, Risk.
+						</div><!-- service_desc -->
+					</div><!-- service_info -->
+					<div btnid="3" class="service_btn expand">
+						<div class="fa fa-chevron-circle-right"></div>
+					</div><!-- service_btn -->
+					</div><!-- service_expand -->
+				</div><!-- service_expand -->
+			</div><!-- service_holder -->
+		</div><!-- service_3 -->
 
 	</div><!-- services_holder -->
 </div><!-- services -->
