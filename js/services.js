@@ -53,13 +53,13 @@ site.services = {
         this.new = id;
         if(this.new == this.current) {
             site.trace('close')
-            TweenMax.to($('#service_'+this.new).find('.service_expand'), .5, {left:"100%", ease:"Power1.easeInOut", overwrite:2}); 
+            TweenMax.to($('#service_'+this.new).find('.service_initial'), 1, {marginLeft:"0%", ease:"Power1.easeInOut", overwrite:2}); 
             this.current = -1;
             return;
         } else {
             site.trace('open')
-            TweenMax.to($('#service_'+this.current).find('.service_expand'), .5, {left:"100%", ease:"Power1.easeInOut", overwrite:2}); 
-            TweenMax.to($('#service_'+this.new).find('.service_expand'), .5, {left:"0%", ease:"Power1.easeInOut", overwrite:2}); 
+            TweenMax.to($('#service_'+this.current).find('.service_initial'), 1, {marginLeft:"0%", ease:"Power1.easeInOut", overwrite:2}); 
+            TweenMax.to($('#service_'+this.new).find('.service_initial'), 1, {marginLeft:"-100%", ease:"Power1.easeInOut", overwrite:2}); 
             this.current = this.new;
         }
         

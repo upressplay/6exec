@@ -42,6 +42,7 @@
 	<link rel="stylesheet" href="css/apply.css">
 	<link rel="stylesheet" href="css/about.css">
 	<link rel="stylesheet" href="css/services.css">
+	<link rel="stylesheet" href="css/team.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -81,6 +82,7 @@
 				include 'includes/apply.php';
 				include 'includes/about.php';
 				include 'includes/services.php';
+				include 'includes/team.php';
 			?>
 			</div><!-- site_content -->
 			

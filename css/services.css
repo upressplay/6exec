@@ -11,25 +11,23 @@
 }
 
 #services_holder {
-	float: left;
 	background-color: #1e1e1e;
+	float: left;
 	width: 100%;
-	padding: 5rem 0;
+	padding: 3rem 0;
 }
 
 .service {
-	width:100%;
-	height:30rem;
+	width:320rem;
 	float:left;
 	overflow: hidden;
 }
 
 @media (min-width: 900px) { 
 	.service {
-		width:100%;
-		height:20rem;
-		float:left;
-		overflow: hidden;
+		width:320rem;
+	float:left;
+	overflow: hidden;
 	}
 }
 
@@ -41,6 +39,20 @@
 @media (min-width: 900px) { 
 	.service_holder {
 		position:relative;
+		padding: 2rem 0;
+	}
+}
+
+.service_initial {
+	float:left;
+	width:160rem;
+	padding: 2rem 0;
+}
+
+@media (min-width: 900px) { 
+	.service_initial {
+		float:left;
+		width:160rem;
 		padding: 2rem 0;
 	}
 }
@@ -140,34 +152,28 @@
 	}
 }
 
+.service_expand_holder {
+	position: relative;
+}
+
 .service_expand {
-	position:absolute;
-	top:0px;
-	left:100%;
+	float:left;
 	background-color: #0079bd;
-	height:100%;
-	width:100%;
+	width:160rem;
 	padding: 2rem 0;
 }
 
 @media (min-width: 900px) { 
 	.service_expand {
-		position:absolute;
-		top:0px;
-		left:100%;
+		float:left;
 		background-color: #0079bd;
-		height:100%;
-		width:100%;
+		width:160rem;
 		padding: 2rem 0;
 	}
 }
 
 .service_expand_holder {
-	width: 100%;
-	height :100%;
-	display: table;
-	vertical-align: middle;
-	float: left;
+
 }
 .expand {
 	color:#000;
