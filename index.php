@@ -12,6 +12,28 @@
 	
 	$meta_img_default = $site_url . '/images/6degrees.jpg';
 	$meta_img = $meta_img_default;
+
+	$about_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/about/');
+	$about_data = json_decode($about_data, true);	
+	$about_data = $about_data['data'];
+
+	$services_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/services/');
+	$services_data = json_decode($services_data, true);	
+	$services_data = $services_data['data'];
+
+	$team_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/team/');
+	$team_data = json_decode($team_data, true);	
+	$team_data = $team_data['data'];
+
+	$candidates_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/candidates/');
+	$candidates_data = json_decode($candidates_data, true);	
+	$candidates_data = $candidates_data['data'];
+
+	$news_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/news/');
+	$news_data = json_decode($news_data, true);	
+	$news_data = $news_data['data'];
+
+
 ?>
 <html lang="en">
 <head>
@@ -43,6 +65,9 @@
 	<link rel="stylesheet" href="css/about.css">
 	<link rel="stylesheet" href="css/services.css">
 	<link rel="stylesheet" href="css/team.css">
+	<link rel="stylesheet" href="css/candidates.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/instagram.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -83,6 +108,9 @@
 				include 'includes/about.php';
 				include 'includes/services.php';
 				include 'includes/team.php';
+				include 'includes/candidates.php';
+				include 'includes/instagram.php';
+
 			?>
 			</div><!-- site_content -->
 			
@@ -103,5 +131,7 @@
   	<script src="js/site.js"></script>
   	<script src="js/home.js"></script>
   	<script src="js/services.js"></script>
+  	<script src="js/nav.js"></script>
+  	<script src="js/instagram.js"></script>
 </body>
 </html>

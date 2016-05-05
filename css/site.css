@@ -55,26 +55,26 @@ p {
 }
 a:link {
 	border: none;
-	color: #afafaf;
-	text-decoration: underline;
+	color: #000;
+	text-decoration: none;
 }
 
 a:visited {
 	border: none;
-	color: #afafaf;
-	text-decoration: underline;
+	color: #000;
+	text-decoration: none;
 }
 
 a:active {
 	border: none;
-	color: #afafaf;
-	text-decoration: underline;
+	color: #000;
+	text-decoration: none;
 }
 
 a:hover {
 	border: none;
 	color: #fff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 
@@ -163,10 +163,15 @@ a:hover {
 	vertical-align: middle;
 }
 .section_title {
-	font-size: 4.8rem;
+	font-size: 4.3rem;
 	line-height: 4.8rem;
 }
-
+@media (min-width: 900px) { 
+	.section_title {
+		font-size: 4.8rem;
+		line-height: 4.8rem;
+	}
+}
 .black_title {
 	color: #000;
 }

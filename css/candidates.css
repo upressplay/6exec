@@ -1,5 +1,5 @@
 
-#team {
+#candidates {
 	float: left;
 	background-color: #0079bd;
 	width: 100%;
@@ -7,37 +7,76 @@
 
 
 
-#team_title {
+#candidates_title {
 	float:left;
 	padding: 1% 5% 2% 5%;
 	width: 90%;
 	background-color: #0079bd;
 }
 
-#team_content {
+#candidates_content {
 	float: left;
-	background-color: #000;
-	padding: 4% 5% 2% 5%;
+	background-color: #1e1e1e;
+	padding: 4% 5% 5% 5%;
 	width: 90%;
 }
-.team_member {
-	padding-bottom: 5%;	
-}
-.team_name {
-	font-size: 4.8rem;
-	font-weight: bold;
-	line-height: 5.5rem;
+.candidates_head {
+	float: left;
+	width: 100%;
+	font-size: 4rem;
+	line-height: 4.8rem;
+	margin-bottom: 3rem;
 	color: #0079bd;
 }
 
-.team_role {
-	font-size: 2.4rem;
-}
-
-.team_bio{
-	font-size: 1.8rem;
-	line-height: 3rem;
+.candidates_desc {
+	font-size: 2rem;
+	line-height: 3.5rem;
 	color: #fff;
 	font-family: Arial, san-serif;
-	margin: 2rem 0;
+}
+
+.signature {
+	width: 30rem;
+	margin-bottom: 3rem;
+}
+
+@media (min-width: 900px) { 
+	.signature {
+		width: 30rem;
+	}
+}
+
+.candidates_photo {
+	width: 20rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 2rem;
+}
+
+@media (min-width: 900px) { 
+	.candidates_photo {
+		width: 13rem;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 2rem;
+	}
+}
+
+.candidates_photo_title {
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 2.5rem;
+	font-family: Arial, san-serif;
+}
+
+@media (min-width: 900px) { 
+	.candidates_photo_title {
+		display: inline-block;
+		vertical-align: middle;
+		color: #fff;
+		font-size: 2.4rem;
+		font-family: Arial, san-serif;
+	}
 }

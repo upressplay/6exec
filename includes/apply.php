@@ -10,7 +10,7 @@
 		</div><!-- apply_btn -->
 
 		<div id="apply_info">
-			<div id="apply_title" class="blue_title">
+			<div id="apply_title">
 				Property Accountant
 				<span id="apply_location" class="blue_sub">Chicago, IL</span>
 			</div><!-- circle_content -->

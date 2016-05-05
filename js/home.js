@@ -42,7 +42,7 @@ site.home = {
 
     load : function () {
 
-        site.trace(this.id+" load");
+        //site.trace(this.id+" load");
 
         var thisobj = this;
 
@@ -73,7 +73,7 @@ site.home = {
 
         this.data[this.new].loaded = true;
 
-        site.trace(this.id+" img_loaded");
+        //site.trace(this.id+" img_loaded");
         TweenMax.to($('#home_anim_'+this.new), 1, {opacity:1, ease:"Power1.easeInOut", overwrite:2}); 
         TweenMax.to($('#home_anim_'+this.current), 1, {opacity:0, ease:"Power1.easeInOut", overwrite:2}); 
         this.current = this.new;

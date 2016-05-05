@@ -14,10 +14,37 @@ nav {
 	}
 }
 
+#nav_btns_toggle{
+	width: 100%;
+	height:0;
+
+	overflow-y: scroll;
+}
+
+@media (min-width: 900px) { 
+	#nav_btns_toggle {
+		width: 100%;
+		height: auto;
+		overflow: auto;
+	}
+}
+
 #nav_holder {
 	display: table;
 	text-align: center;
 	width: 100%;
+	height:0;
+	overflow: hidden;
+	padding-bottom: 20rem;
+}
+
+@media (min-width: 900px) { 
+	#nav_holder {
+		display: table;
+		text-align: center;
+		width: 100%;
+		padding:0 0;
+	}
 }
 
 .nav_btn {
@@ -25,9 +52,12 @@ nav {
 	display: inline-block;
 	font-family: 'sitefont', serif;
 	font-weight: bold;
-	font-size: 3rem;
-	line-height: 3.5rem;
-	padding: 1rem 2rem;
+	font-size: 8rem;
+	line-height: 14rem;
+	padding: 1rem 0rem;
+	text-align: center;
+	vertical-align: middle;
+	width:100%;
 }
 
 @media (min-width: 900px) { 
@@ -39,15 +69,17 @@ nav {
 		font-size: 3rem;
 		line-height: 6.5rem;
 		padding:1rem 2rem;
+		text-align: center;
 		vertical-align: middle;
+		width:auto;
 	}
 }
 
 .social_btn {
 	color: #186693;
 	display: inline-block;
-	font-size: 3.4rem;
-	line-height: 3.5rem;
+	font-size: 8rem;
+	line-height: 14rem;
 	padding: 1rem 2rem;
 	vertical-align: middle;
 }
@@ -62,3 +94,47 @@ nav {
 		vertical-align: middle;
 	}
 }
+
+#nav_toggle {
+	width:100%;
+	text-align: center;
+	color: #186693;
+	padding: 2% 0;
+	font-size: 7rem;
+}
+
+.img_btn {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.img_btn, .img_btn_holder, .img_btn_rest, .img_btn_toll {
+	width: 7.3rem;
+	height: 8rem;
+}
+
+@media (min-width: 900px) { 
+	.img_btn, .img_btn_holder, .img_btn_rest, .img_btn_toll {
+		width: 3.5rem;
+		height: 3.7rem;
+	}
+}
+
+.img_btn_holder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.img_btn_rest {
+	position: absolute;
+}
+.img_btn_roll {
+	position: absolute;
+	opacity: 0;
+}
+.img_btn img {
+	width: 100%;
+	height:auto;
+}
+
+

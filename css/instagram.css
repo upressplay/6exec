@@ -1,0 +1,44 @@
+
+#instagram {
+	float: left;
+	background-color: #000;
+	width: 100%;
+}
+
+
+
+#instagram_title {
+	float:left;
+	padding: 1% 5% 2% 5%;
+	width: 90%;
+	background-color: #000;
+}
+
+
+#instagram_title a:link {
+	font-size: 2.4rem;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+}
+
+#instagram_title a:visited {
+	font-size: 2.4rem;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+}
+
+#instagram_title a:active {
+	font-size: 2.4rem;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+}
+
+#instagram_title a:hover {
+	font-size: 2.4rem;
+	border: none;
+	color: #fff;
+	text-decoration: underline;
+}
