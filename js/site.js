@@ -249,20 +249,8 @@ var site = {
 
         history.pushState(null, null, url);
 
-        //site.trace("set_url seg1 = "+seg1+" seg2 = "+seg2+" seg3 = "+seg3);
+        site.trace("set_url seg1 = "+seg1+" seg2 = "+seg2+" seg3 = "+seg3);
 
-        if(seg1 == "") {
-            title = site.meta_title;
-            desc = site.meta_desc;
-        }
-        if(title == "" || title == undefined || title == null) title = site.meta_title;
-        if(desc == "" || desc == undefined || desc == null) desc = site.meta_desc;
-        if(img == "" || img == undefined || img == null) img = site.meta_img;
-
-        $("meta[property='og:title']").attr('content', title);
-        $("meta[property='og:description']").attr('content', desc);
-        $("meta[property='og:image']").attr('content', img);
-        $("meta[property='og:url']").attr('content', site.site_url + url);
 
         this.get_segments();
 
@@ -370,7 +358,10 @@ var site = {
         var this_position = $( val ).position();
         this_position = this_position.top;
         site.trace("this_position = "+this_position)
-        TweenMax.to($( '#site_holder' ), 1, {delay:.5, scrollTo:{y:this_position}, ease:"Power2.easeOut"});
+        var current_scroll = $( '#site_holder' ).scrollTop(  );
+
+        var final_scroll = this_position+current_scroll - $('nav').height();
+        TweenMax.to($( '#site_holder' ), 1, {delay:.5, scrollTo:{y:final_scroll}, ease:"Power2.easeOut"});
 
     },
 

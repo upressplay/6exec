@@ -4,7 +4,7 @@
 	</div>
 	<div id="nav_btns_toggle">
 	<div id="nav_holder">
-		<a href="http://6degreesinc.com/" target="_self">
+		<a href="/" target="_self">
 			<div class="nav_btn">
 				home
 			</div><!-- home -->
@@ -15,7 +15,7 @@
 			</div><!-- positions -->
 		</a>
 		<a href="http://apply.6degreesinc.com/" target="_blank">
-		<div class="nav_btn">
+			<div class="nav_btn">
 				apply
 			</div><!-- apply -->
 		</a>
@@ -38,11 +38,6 @@
 			<div class="nav_btn">
 				news
 			</div><!-- news -->
-		</a>
-		<a href="/teams/">
-			<div id="teams" class="nav_btn">
-				teams
-			</div><!-- teams -->
 		</a>
 		<a href="https://www.linkedin.com/company/202275?trk" target="_blank">
 			<div type="linkedin" class="social_btn">

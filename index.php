@@ -101,7 +101,6 @@
 	<div id="site_holder">
 		
 		<div id="site_container">
-			<div id="site_content">
 			<?php 
 				include 'includes/header.php';
 				include 'includes/apply.php';
@@ -112,7 +111,6 @@
 				include 'includes/instagram.php';
 
 			?>
-			</div><!-- site_content -->
 			
 
 		</div><!-- site_container -->

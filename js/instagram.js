@@ -8,7 +8,7 @@ site.instagram = {
     instagram_data:[],
     client_id:'518317687f144d9cb634b6b005b800e1',
     instagram_user:'6degreeschicago',
-    max_entries:3,
+    max_entries:9,
 	initialize : function () {
 
 		this.render();
@@ -202,7 +202,7 @@ site.instagram = {
 
 
     instagram_entry_w : function () {
-        var value = 265 * site.scale();
+        var value = 177 * site.scale();
         if(site.device == "mobile") value = site.window_width() * .33;
         return value;
     },

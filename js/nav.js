@@ -12,6 +12,7 @@ site.nav = {
     new:0,
     loading:false,
     open:false,
+    scroll_urls:['about','team'],
     initialize : function () {
 
         var thisobj = this;
@@ -29,21 +30,22 @@ site.nav = {
 
         var thisobj = this;
 
-        $( "#nav_holder a" ).click(function( event ) {
+        $( "nav a" ).click(function( event ) {
             var href = $(this).attr('href');
             var target = $(this).attr('target');
             site.trace("href = "+href+" target = "+target)
-            if(target != "_blank") {
+            if(target == "_blank") {
+                
+            } else {
                 event.preventDefault();
                 event.stopPropagation();  
 
                 href = href.replace('/','');
                 href = href.replace('/','');
-                site.scroll_to('#'+href)
+                thisobj.btn_set_url(href);
             }
             
 
-            
         });
 
  
@@ -73,9 +75,22 @@ site.nav = {
                 TweenMax.to($( this ), .5, {color:'#186693', ease:"Power1.easeInOut", overwrite:2}); 
             });      
         }
+
+        site.trace("site.segments[1] = "+site.segments[1])
+        if(site.segments[1] != undefined && site.segments[1] != "") this.btn_set_url(site.segments[1]);
         
         this.resize();
 
+    },
+
+    btn_set_url : function (id) {
+
+        site.trace("btn_set_url id = "+id)
+        if(id == "") id = 'home';
+        
+        site.scroll_to('#'+id);
+        if(id == "home") id = '';
+        site.set_url(id)
     },
 
     toggle : function () {
