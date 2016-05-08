@@ -8,7 +8,7 @@ site.instagram = {
     instagram_data:[],
     client_id:'518317687f144d9cb634b6b005b800e1',
     instagram_user:'6degreeschicago',
-    max_entries:9,
+    max_entries:10,
 	initialize : function () {
 
 		this.render();
@@ -193,7 +193,7 @@ site.instagram = {
 		}
 
        $('.instagram_grid').css({
-            "width":this.instagram_entry_w()+"px",
+            "width":this.instagram_entry_w(),
             });
 
 
@@ -202,8 +202,8 @@ site.instagram = {
 
 
     instagram_entry_w : function () {
-        var value = 177 * site.scale();
-        if(site.device == "mobile") value = site.window_width() * .33;
+        var value = 100 / 5 +"%";
+        if(site.device == "mobile") value = 100 / 3 +"%";
         return value;
     },
 

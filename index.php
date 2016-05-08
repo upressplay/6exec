@@ -1,21 +1,37 @@
 <!doctype html>
 <?php 
 
-	$meta_title_default = "6 Degrees Search";
+	$cdn = "/";
+
+	$segments = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/')); 
+
+	$meta_title_default = "6 Degrees Inc.";
 	$meta_title = $meta_title_default;
 
-	$meta_desc_default = "As Chicagolands trusted accounting and finance staffing agency, 6 degrees matches accounting and financial professionals with quality opportunities in both large and small organizations in every industry.  We specialize in temporary staffing, executive search, retained search, and consulting.  Our staff are CPA’s, Accountants, and consultants themselves.  We have collectively serviced Chicagoland for over 100 years, and have placed over 1500 professionals in the area.  Our experience gives us the unique ability to truly understand the art of the financial hire.  We add value by saving time, and reducing risk.  ";
-	$meta_desc = $meta_desc_default;
+	
 
 	$site_url = "http://" . $_SERVER['HTTP_HOST'];
 	$meta_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	
+
+	$meta_desc_default = "As Chicagolands trusted accounting and finance staffing agency, 6 degrees matches accounting and financial professionals with quality opportunities in both large and small organizations in every industry.  We specialize in temporary staffing, executive search, retained search, and consulting.  Our staff are CPA’s, Accountants, and consultants themselves.  We have collectively serviced Chicagoland for over 100 years, and have placed over 1500 professionals in the area.  Our experience gives us the unique ability to truly understand the art of the financial hire.  We add value by saving time, and reducing risk.  ";
+	$meta_desc = $meta_desc_default;
+
 	$meta_img_default = $site_url . '/images/6degrees.jpg';
 	$meta_img = $meta_img_default;
 
 	$about_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/about/');
 	$about_data = json_decode($about_data, true);	
 	$about_data = $about_data['data'];
+
+	$count = 0;
+		foreach ( $about_data as $a ) {
+			if($count<1) {
+				$meta_desc_default = $a['desc'];
+			}
+			
+			$count++;
+		}
 
 	$services_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/services/');
 	$services_data = json_decode($services_data, true);	
@@ -32,6 +48,34 @@
 	$news_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/news/');
 	$news_data = json_decode($news_data, true);	
 	$news_data = $news_data['data'];
+
+
+
+	if($segments[0] == "news") {
+
+		$meta_title = $meta_title_default . " : News";
+		
+		foreach ( $news_data as $n ) {
+
+			if($segments[1] == $n['id']) {
+				$meta_title = $meta_title . " : " . $n['title'];
+				$meta_desc = substr(strip_tags($n['desc']), 0, 300);
+				$meta_img  = $n['img'];
+			}	
+		}
+		
+		
+
+	}
+
+	$contact_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/contact/');
+	$contact_data = json_decode($contact_data, true);	
+	$contact_data = $contact_data['data'];
+
+	$position_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/position/');
+	$position_data = json_decode($position_data, true);	
+	$position_data = $position_data['data'];
+
 
 
 ?>
@@ -58,16 +102,18 @@
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
  	<link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="css/site.css">
-	<link rel="stylesheet" href="css/nav.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/apply.css">
-	<link rel="stylesheet" href="css/about.css">
-	<link rel="stylesheet" href="css/services.css">
-	<link rel="stylesheet" href="css/team.css">
-	<link rel="stylesheet" href="css/candidates.css">
-	<link rel="stylesheet" href="css/footer.css">
-	<link rel="stylesheet" href="css/instagram.css">
+	<link rel="stylesheet" href="/css/site.css">
+	<link rel="stylesheet" href="/css/nav.css">
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/apply.css">
+	<link rel="stylesheet" href="/css/about.css">
+	<link rel="stylesheet" href="/css/services.css">
+	<link rel="stylesheet" href="/css/team.css">
+	<link rel="stylesheet" href="/css/candidates.css">
+	<link rel="stylesheet" href="/css/footer.css">
+	<link rel="stylesheet" href="/css/instagram.css">
+	<link rel="stylesheet" href="/css/news.css">
+	<link rel="stylesheet" href="/css/contact.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -108,7 +154,9 @@
 				include 'includes/services.php';
 				include 'includes/team.php';
 				include 'includes/candidates.php';
+				include 'includes/news.php';
 				include 'includes/instagram.php';
+				include 'includes/contact.php';
 
 			?>
 			
@@ -122,14 +170,32 @@
 
 	
 	
-	<script src="js/lib/jquery-2.2.3.min.js"></script>
-  	<script src="js/lib/TweenMax.min.js"></script>
-  	<script src="js/lib/ScrollToPlugin.min.js"></script>
+	<script src="/js/lib/jquery-2.2.3.min.js"></script>
+  	<script src="/js/lib/TweenMax.min.js"></script>
+  	<script src="/js/lib/ScrollToPlugin.min.js"></script>
   	
-  	<script src="js/site.js"></script>
-  	<script src="js/home.js"></script>
-  	<script src="js/services.js"></script>
-  	<script src="js/nav.js"></script>
-  	<script src="js/instagram.js"></script>
+  	<script src="/js/site.js"></script>
+
+  	<script>
+	<?php 
+		
+		$js_segments = json_encode($segments);
+		echo "site.segments = ". $js_segments . ";\n"; 
+
+		$news_data = json_encode($news_data);
+		echo "site.news_data = ". $news_data . ";\n"; 
+
+		$position_data = json_encode($position_data);
+		echo "site.position_data = ". $position_data . ";\n"; 
+
+	?>
+	</script>
+
+	<script src="/js/nav.js"></script>
+  	<script src="/js/home.js"></script>
+  	<script src="/js/services.js"></script>
+  	<script src="/js/news.js"></script>
+  	<script src="/js/instagram.js"></script>
+  	<script src="/js/apply.js"></script>
 </body>
 </html>

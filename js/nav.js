@@ -12,7 +12,7 @@ site.nav = {
     new:0,
     loading:false,
     open:false,
-    scroll_urls:['about','team'],
+    scroll_urls:['http://6degreesinc.com/about/','http://6degreesinc.com/team/','http://6degreesinc.com/services/', 'http://6degreesinc.com/news/','http://6degreesinc.com/contact/'],
     initialize : function () {
 
         var thisobj = this;
@@ -30,20 +30,16 @@ site.nav = {
 
         var thisobj = this;
 
-        $( "nav a" ).click(function( event ) {
+        $( "nav a" ).add( "footer a" ).click(function( event ) {
+
+            event.preventDefault();
+            event.stopPropagation();  
+
             var href = $(this).attr('href');
             var target = $(this).attr('target');
-            site.trace("href = "+href+" target = "+target)
-            if(target == "_blank") {
-                
-            } else {
-                event.preventDefault();
-                event.stopPropagation();  
-
-                href = href.replace('/','');
-                href = href.replace('/','');
-                thisobj.btn_set_url(href);
-            }
+            site.trace("href = "+href+" target = "+target);
+            
+            thisobj.nav_handler( href, target );
             
 
         });
@@ -76,10 +72,44 @@ site.nav = {
             });      
         }
 
+        $('#search_btn').click(function (event){  
+            thisobj.search_positions();
+            }); 
+
         site.trace("site.segments[1] = "+site.segments[1])
-        if(site.segments[1] != undefined && site.segments[1] != "") this.btn_set_url(site.segments[1]);
+        if(site.segments[1] != undefined && site.segments[1] != "") site.scroll_to('#'+site.segments[1]);
         
         this.resize();
+
+    },
+
+    nav_handler : function (href, target) {
+
+        var i;
+        
+        for (i = 0; i < this.scroll_urls.length; i++) {
+
+            site.trace("nav_handler href = "+href+"this.scroll_urls[i] = "+this.scroll_urls[i]+" site.site_url = "+site.site_url)
+            if(href == this.scroll_urls[i] && site.site_url == "6degreesinc.com") {
+
+
+                href = href.replace('http://6degreesinc.com/','');
+                href = href.replace('/','');
+                this.btn_set_url(href);
+                return;
+            }   
+        }
+        
+        window.open(href,target);
+    },
+
+    search_positions : function () {
+        var search_term = $('#search_position').val();
+        site.trace("search_positions search_term = "+search_term);
+        if(search_term != "" && search_term != undefined ) {
+            search_term = encodeURIComponent(search_term);
+            window.open( 'http://positions.6degreesinc.com/?search='+search_term, "_self" );
+        }
 
     },
 
@@ -107,11 +137,6 @@ site.nav = {
             this.open = true;
             TweenMax.to($('#nav_btns_toggle'), .5, {height:this.nav_height()+'px', ease:"Power1.easeInOut", overwrite:2}); 
         }
-
-        
-
-
-        new_img.src = photo_url;
 
     },
 

@@ -1,0 +1,155 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	font-family: 'sitefont', serif;
+	color: #000;
+	font-size: 10px;
+	word-spacing: normal;
+	letter-spacing: normal;
+	background-color: #000;
+}
+
+body {
+	position: relative;
+}
+
+img {
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+@media ( min-width: 700px) {
+
+	::-webkit-scrollbar {
+		width: 7px;
+	}
+	::-webkit-scrollbar-track {
+		border-radius: 0px;
+		background-color: #ccc;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 0px;
+		background-color: #333;
+	}
+
+}
+
+p {
+	display: block;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+@font-face {
+    font-family: 'sitefont';
+    src: url('fonts/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a:link {
+	border: none;
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	border: none;
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	border: none;
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	border: none;
+	color: #fff;
+	text-decoration: underline;
+}
+
+.screen-reader-text { /* Reusable, toolbox kind of class */
+  	position: absolute;
+  	top: -9999px;
+  	left: -9999px;
+}
+
+#site_holder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: none;
+}
+
+#site_container {
+	background-color: #171717;
+	float: left;
+	width: 100%;
+	min-height: 15rem;
+}
+
+#site_content {
+	float: left;
+	width: 94%;
+	padding: 3%;
+	min-height: 15rem;
+	background-color: #dedede;
+	
+}
+
+@media (min-width: 900px) { 
+	#site_content {
+		float: left;
+		width: 94%;
+		padding: 3%;
+		min-height: 10rem;
+		background-color: #dedede;
+	}
+}
+h1 {
+	color:#0079be;
+	font-family: Arial;
+}
+
+h2 {
+	color:#333;
+	font-family: Arial;
+	font-style: italic;
+}
+
+p {
+	color:#000;
+	font-family: Arial;
+}
+
+
+.desktop {
+	display: none;
+}
+
+.mobile {
+	display: block;
+}
+
+@media (min-width: 900px) { 
+	.desktop {
+		display: block;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+}

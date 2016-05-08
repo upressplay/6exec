@@ -17,10 +17,10 @@ site.home = {
 
         $( window ).resize(function() { thisobj.resize(); });
 
-        this.data.push({img:"images/home_01.jpg", loaded:false});
-        this.data.push({img:"images/home_02.jpg", loaded:false});
-        this.data.push({img:"images/home_03.jpg", loaded:false});
-        this.data.push({img:"images/home_04.jpg", loaded:false});
+        this.data.push({img:"/images/home_01.jpg", loaded:false});
+        this.data.push({img:"/images/home_02.jpg", loaded:false});
+        this.data.push({img:"/images/home_03.jpg", loaded:false});
+        this.data.push({img:"/images/home_04.jpg", loaded:false});
 
         this.render();
 
@@ -32,7 +32,6 @@ site.home = {
         site.trace(this.id+" render");
 
         var thisobj = this;
-
 
         this.load();
        
@@ -54,7 +53,7 @@ site.home = {
             return;
         }
 
-        var photo_url = this.data[this.new].img;
+        var photo_url = site.cdn+this.data[this.new].img;
         var new_img = new Image();  
         new_img.onload = function () {   
             thisobj.img_loaded();

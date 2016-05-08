@@ -1,27 +1,39 @@
 <div id="apply">
 	<div id="apply_content">
-		<div id="apply_btn" class="circle_blue">
-			<div class="circle_content">
-				<div class="circle_txt">
-					<div class="fa fa-pencil-square-o apply_icon" aria-hidden="true"></div>
-					apply°
-				</div><!-- circle_txt -->
-			</div><!-- circle_content -->
-		</div><!-- apply_btn -->
-
-		<div id="apply_info">
-			<div id="apply_title">
-				Property Accountant
-				<span id="apply_location" class="blue_sub">Chicago, IL</span>
-			</div><!-- circle_content -->
-
-			<div id="apply_desc" class="gray_desc">
-				Our Chicago Loop based client is a major player in the Real Estate & Property Management Healthcare sector. They have an immediate opening for a Property Accountant to join the team. Excellent benefits and growth available with this role.
-			</div>
-			<div id="pay_range" class="gray_subhead">
-				$50,000.00 - $65,000.00
-			</div>
-		</div><!-- apply_info -->
+		<?php 
+		
+		$count = 0;
+		foreach ( $position_data as $p ) {
+			
+			echo '<div id="position_'. $count . '" class="position">';
+				echo '<a href="' . $p['url'] . '">';
+					echo '<div id="apply_btn" class="circle_blue">';
+						echo '<div class="circle_content">';
+							echo '<div class="circle_txt">';
+								echo '<div class="fa fa-pencil-square-o apply_icon" aria-hidden="true"></div>';
+								echo 'apply°';
+							echo '</div><!-- circle_txt -->';
+						echo '</div><!-- circle_content -->';
+					echo '</div><!-- apply_btn -->';
+				echo '</a>';
+				echo '<div id="apply_info">';
+					echo '<div id="apply_title">';
+						echo $p['title'];
+						echo ' <span id="apply_location" class="blue_sub">' . $p['location'] . '</span>';
+					echo '</div><!-- circle_content -->';
+					echo '<div id="apply_desc" class="gray_desc">';
+						echo $p['desc'];
+					echo '</div><!-- apply_desc -->';
+					echo '<div id="pay_range" class="gray_subhead">';
+						echo $p['salary'];
+					echo '</div><!-- pay_range -->';
+				echo '</div><!-- apply_info -->';
+				echo '</div><!-- position -->';
+			
+			$count++;
+		}
+		?>
+		
 	</div><!-- apply_content -->
 </div><!-- apply -->
 

@@ -15,7 +15,10 @@ class json_api_sitedata_controller {
 			$entry = array(
 				'id' => $post->post_name,
 				'title' => get_the_title(),
-				'phone' => get_field('contact_number'),
+				'address' => get_field('contact_address'),
+				'phone' => get_field('contact_phone'),
+				'map' => get_field('contact_map'),
+				'contacts' => get_field('contacts'),
 				);
 			$data[] = $entry;
 		endwhile;
@@ -154,6 +157,36 @@ class json_api_sitedata_controller {
 				'photo' => get_field('candidates_photo'),
 				'name' => get_field('candidates_name'),
 				'position' => get_field('candidates_position'),
+				);
+			$data[] = $entry;
+		endwhile;
+
+		return array(
+			'status' => 'ok',
+			'data' => $data
+		);
+
+
+
+	}
+
+	public function position () {
+
+		query_posts( array ( 'post_type' => 'position' ) );
+
+		$data = array();
+
+		while ( have_posts() ) : the_post();
+
+			$post = get_post(get_the_ID());
+
+			$entry = array(
+				'id' => $post->post_name,
+				'title' => get_the_title(),
+				'location' => get_field('position_location'),
+				'desc' => get_field('position_desc'),
+				'salary' => get_field('position_salary'),
+				'url' => get_field('position_url'),
 				);
 			$data[] = $entry;
 		endwhile;

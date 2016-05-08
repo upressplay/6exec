@@ -1,0 +1,44 @@
+
+#home {
+	float: left;
+	width:160rem;
+	height:13.5rem;
+	margin-top: 15rem;
+	background-color: #000;
+}
+
+@media (min-width: 900px) { 
+	#home {
+		float: left;
+		width:160rem;
+		height:13.5rem;
+		margin-top: 8rem;
+		background-color: #000;
+	}
+}
+
+#site_logo {
+	position: absolute;
+	width: 34.5rem;
+	height:13.5rem;
+	top:1rem;
+	left:5rem;
+}
+
+#home_holder {
+	position:relative;
+}
+
+#home_anim {
+	position:absolute;
+}
+
+.home_anim {
+	position: absolute;
+	width:160rem;
+	height:13.5rem;
+}
+.home_anim img{
+	width:100%;
+	height:auto;
+}

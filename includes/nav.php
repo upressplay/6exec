@@ -14,29 +14,35 @@
 				positions
 			</div><!-- positions -->
 		</a>
-		<a href="http://apply.6degreesinc.com/" target="_blank">
+		<a href="http://apply.6degreesinc.com/" target="_self">
 			<div class="nav_btn">
 				apply
 			</div><!-- apply -->
 		</a>
-		<a href="/about/">
+		<a href="http://6degreesinc.com/about/" target="_self">
 			<div class="nav_btn">
 				about
 			</div><!-- about -->
 		</a>
-		<a href="/team/">
+		<a href="http://6degreesinc.com/team/" target="_self">
 			<div class="nav_btn">
 				team
 			</div><!-- team -->
 		</a>
-		<a href="/services/">
+		<a href="http://6degreesinc.com/services/" target="_self">
 			<div class="nav_btn">
 				services
 			</div><!-- services -->
 		</a>
-		<a href="/news/">
+		<a href="http://6degreesinc.com/news/" target="_self">
 			<div class="nav_btn">
 				news
+			</div><!-- news -->
+		</a>
+
+		<a href="http://6degreesinc.com/contact/" target="_self">
+			<div class="nav_btn">
+				contact
 			</div><!-- news -->
 		</a>
 		<a href="https://www.linkedin.com/company/202275?trk" target="_blank">
@@ -51,7 +57,7 @@
 				<span class="screen-reader-text">Instagram</span>
 			</div><!-- linkedin -->
 		</a>
-		<a href="https://www.facebook.com/6DegreesStaffing" target="_blank">
+		<a href="https://www.facebook.com/6Degreesinc" target="_blank">
 			<div type="facebook" class="social_btn">
 				<span class="fa fa-facebook" aria-hidden="true" ></span>
 				<span class="screen-reader-text">Facebook</span>
