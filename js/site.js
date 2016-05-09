@@ -360,7 +360,7 @@ var site = {
         site.trace("this_position = "+this_position)
         var current_scroll = $( '#site_holder' ).scrollTop(  );
 
-        var final_scroll = this_position+current_scroll - $('nav').height();
+        var final_scroll = this_position + current_scroll - ($('nav').height() * 1);
         TweenMax.to($( '#site_holder' ), 1, {delay:.5, scrollTo:{y:final_scroll}, ease:"Power2.easeOut"});
 
     },
