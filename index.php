@@ -27,7 +27,9 @@
 	$count = 0;
 		foreach ( $about_data as $a ) {
 			if($count<1) {
-				$meta_desc_default = $a['desc'];
+				$meta_desc = $a['desc'];
+				$meta_img = $a['img'];
+				$meta_title = $a['title'];
 			}
 			
 			$count++;
@@ -75,6 +77,10 @@
 	$position_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/position/');
 	$position_data = json_decode($position_data, true);	
 	$position_data = $position_data['data'];
+
+	$header_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/header/');
+	$header_data = json_decode($header_data, true);	
+	$header_data = $header_data['data'];
 
 
 
@@ -141,6 +147,16 @@
 
 <body>
 
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M9B889"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9B889');</script>
+<!-- End Google Tag Manager -->
+
 	<?php 
 		include 'includes/nav.php';
 	?>
@@ -187,6 +203,10 @@
 
 		$position_data = json_encode($position_data);
 		echo "site.position_data = ". $position_data . ";\n"; 
+
+		$header_data = json_encode($header_data);
+		echo "site.header_data = ". $header_data . ";\n"; 
+
 
 	?>
 	</script>

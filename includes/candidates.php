@@ -20,7 +20,7 @@
 				echo '<div class="signature">';
 					echo '<img src="' . $c['signature'] . '">';
 				echo '</div><!-- signature -->';
-
+				if($c['link'] != "") echo '<a href="'.$c['link'] .'" target="_blank">';
 				echo '<div class="candidates_photo_content">';
 					echo '<div class="candidates_photo">';
 						echo '<img src="' . $c['photo'] . '">';
@@ -29,6 +29,7 @@
 						echo $c['name'] . '<br/>' . $c['position'];
 					echo '</div><!-- candidates_photo_title -->';
 				echo '</div><!-- candidates_photo_content -->';
+				if($c['link'] != "") echo '</a>';
 			}
 			
 			$count++;

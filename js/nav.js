@@ -12,7 +12,7 @@ site.nav = {
     new:0,
     loading:false,
     open:false,
-    scroll_urls:['http://6degreesinc.com/about/','http://6degreesinc.com/team/','http://6degreesinc.com/services/', 'http://6degreesinc.com/news/','http://6degreesinc.com/contact/'],
+    scroll_urls:['http://6degreesinc.com/','http://6degreesinc.com/about/','http://6degreesinc.com/team/','http://6degreesinc.com/services/', 'http://6degreesinc.com/news/','http://6degreesinc.com/candidates/','http://6degreesinc.com/contact/'],
     initialize : function () {
 
         var thisobj = this;
@@ -86,6 +86,8 @@ site.nav = {
     nav_handler : function (href, target) {
 
         var i;
+
+        site.track({event:'nav_click', url:href});
         
         for (i = 0; i < this.scroll_urls.length; i++) {
 

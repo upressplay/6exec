@@ -20,7 +20,6 @@ site.home = {
         this.data.push({img:"images/home_01.jpg", loaded:false});
         this.data.push({img:"images/home_02.jpg", loaded:false});
         this.data.push({img:"images/home_03.jpg", loaded:false});
-        this.data.push({img:"images/home_04.jpg", loaded:false});
 
         this.render();
 

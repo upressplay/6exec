@@ -119,6 +119,7 @@ site.news = {
         $('#'+this.data[new_id].id+" .news_img").append('<img src="'+this.data[new_id].img+'">');
         $('#'+this.data[new_id].id).append('<div class="news_info"></div>');
         $('#'+this.data[new_id].id+" .news_info").append('<div class="news_title">'+this.data[new_id].title+'</div>');
+
         $('#'+this.data[new_id].id+" .news_info").append('<div class="news_desc">'+this.data[new_id].short_desc+'</div>');
 
         $('#'+this.data[new_id].id+" .news_info").append('<div class="news_read_more">read more°</div>');
@@ -128,6 +129,8 @@ site.news = {
 
         
     },
+
+    
 
     set_articles : function () {
 
@@ -278,6 +281,36 @@ site.news = {
                     $('#news_article').append('<span id="news_article_top"></span>');
                     $('#news_article_top').append('<span class="news_article_title">'+this.data[i].title+'</span>');
                     
+                    $('#news_article_top').append('<div class="news_share">Share: </div>');
+
+
+                    $('#news_article_top .news_share').append('<div entryid="'+this.data[i].id+'" type="facebook" class="overlay_share_btn"><span class="fa fa-facebook" aria-hidden="true" ></span><span class="screen-reader-text">Facebook</span></div>');
+
+                    $('#news_article_top .news_share').append('<div entryid="'+this.data[i].id+'" type="twitter" class="overlay_share_btn"><span class="fa fa-twitter" aria-hidden="true" ></span><span class="screen-reader-text">Twitter</span></div>');
+
+                    $('#news_article_top .news_share').append('<div entryid="'+this.data[i].id+'" type="pinterest" class="overlay_share_btn"><span class="fa fa-pinterest" aria-hidden="true" ></span><span class="screen-reader-text">Twitter</span></div>');
+
+                    $('#news_article_top .news_share').append('<div entryid="'+this.data[i].id+'" type="google" class="overlay_share_btn"><span class="fa fa-google" aria-hidden="true" ></span><span class="screen-reader-text">Twitter</span></div>');
+
+
+                    $('#news_article_top .news_share').append('<div entryid="'+this.data[i].id+'" type="tumblr" class="overlay_share_btn"><span class="fa fa-tumblr" aria-hidden="true" ></span><span class="screen-reader-text">Twitter</span></div>');
+
+                     $('.overlay_share_btn').click(function(event){
+                        var type = $(this).attr('type');
+                        var id = $(this).attr('entryid');
+                        thisobj.share_article(type,id);
+                    });
+                    
+                    if(site.device == "desktop") {
+                        $('.overlay_share_btn').mouseenter(function (event){  
+                           TweenMax.to($( this ), .25, {color:"#666", ease:"Power1.easeInOut", overwrite:2}); 
+                        });
+
+                        $('.overlay_share_btn').mouseleave(function (event){  
+                            TweenMax.to($( this ), .5, {color:"#0079be", ease:"Power1.easeInOut", overwrite:2}); 
+                        });      
+                    }
+
                     $('#news_article').append('<span class="news_article_desc">'+this.data[i].desc+'</span>');
 
          
@@ -307,6 +340,24 @@ site.news = {
         }
 
     },
+
+    share_article : function (type, id) {
+        
+        site.trace("share_article type = "+type+" id = "+id);
+
+        var i;
+        for (i = 0; i < this.data.length; i++) {
+            if(this.data[i].id == id) {
+                var url = site.site_url+"/"+this.id+"/"+this.data[i].id;
+                var img = this.data[i].img;
+                var desc = this.data[i].title + " " +this.data[i].desc;   
+
+                site.share(type,id,url,img,desc);
+            }
+        }
+
+    },
+
     reset_article : function () {
         $('#news_overlay').remove();
     },

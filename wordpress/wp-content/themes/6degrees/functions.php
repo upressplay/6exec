@@ -34,6 +34,27 @@ function create_site_post_types() {
 		)
 	);
 
+	register_post_type( 'header',
+		array(
+			'labels' => array(
+				'name' => 'Header',
+				'singular_name' => 'Header',
+				'add_new' => 'Add Header',
+			),
+			'public' => true,
+			'show_ui' => true,
+			'show_in_nav_menus' => false,
+			'query_var' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_nav_menus' => true,
+			'can_export' => true,
+			'hierarchical' => false,
+			'exclude_from_search' => true,
+			'rewrite' => array('slug' => 'header','with_front' => false),
+		)
+	);
+
 	register_post_type( 'about',
 		array(
 			'labels' => array(

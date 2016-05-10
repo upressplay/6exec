@@ -289,6 +289,15 @@ var site = {
 	    	window.open(network_url, "facebook_share", "width=600, height=400");
 	    }
 
+        if(type == "tumblr") {
+            var share_url = url;
+            share_url = encodeURIComponent(share_url);
+            var network_url = "http://tumblr.com/widgets/share/tool?canonicalUrl="+share_url;
+            window.open(network_url, "tumblr_share", "width=600, height=400");
+        }
+
+        
+
 	    if(type == "twitter") {
 	    	var share_txt = desc;
             var share_url = url;
@@ -319,7 +328,7 @@ var site = {
 	    	window.open(network_url, "google_share", "width=600, height=600");
 	    }
 
-	    if(type == "pintrest") {
+	    if(type == "pinterest") {
             var share_txt = desc;
 	    	var share_url = url;
 	    	site.trace("share_url = "+share_url)

@@ -29,6 +29,31 @@ class json_api_sitedata_controller {
 		);
 	}
 
+	public function header () {
+
+		query_posts( array ( 'post_type' => 'header' ) );
+
+		$data = array();
+
+		while ( have_posts() ) : the_post();
+
+			$post = get_post(get_the_ID());
+
+			$entry = array(
+				'id' => $post->post_name,
+				'title' => get_the_title(),
+				'img' => get_field('header_img'),
+				'loaded' => false
+				);
+			$data[] = $entry;
+		endwhile;
+
+		return array(
+			'status' => 'ok',
+			'data' => $data
+		);
+	}
+
 	public function about () {
 
 		query_posts( array ( 'post_type' => 'about' ) );
@@ -43,6 +68,7 @@ class json_api_sitedata_controller {
 				'id' => $post->post_name,
 				'title' => get_the_title(),
 				'desc' => get_field('about_desc'),
+				'img' => get_field('about_img'),
 				);
 			$data[] = $entry;
 		endwhile;
@@ -157,6 +183,7 @@ class json_api_sitedata_controller {
 				'photo' => get_field('candidates_photo'),
 				'name' => get_field('candidates_name'),
 				'position' => get_field('candidates_position'),
+				'link' => get_field('candidates_link')
 				);
 			$data[] = $entry;
 		endwhile;
