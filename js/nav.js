@@ -72,9 +72,9 @@ site.nav = {
             });      
         }
 
-        $('#search_btn').click(function (event){  
-            thisobj.search_positions();
-            }); 
+        //$('#search_btn').click(function (event){  
+          //  thisobj.search_positions();
+            //}); 
 
         site.trace("site.segments[1] = "+site.segments[1])
         if(site.segments[1] != undefined && site.segments[1] != "") site.scroll_to('#'+site.segments[1]);
@@ -108,10 +108,32 @@ site.nav = {
     search_positions : function () {
         var search_term = $('#search_position').val();
         site.trace("search_positions search_term = "+search_term);
-        if(search_term != "" && search_term != undefined ) {
-            search_term = encodeURIComponent(search_term);
-            window.open( 'http://positions.6degreesinc.com/?search='+search_term, "_self" );
+
+        if(search_term == "" || search_term == undefined ) {
+            return;
+            //search_term = encodeURIComponent(search_term);
+            //window.open( 'http://positions.6degreesinc.com/?search='+search_term, "_self" );
         }
+
+        $.ajax({
+            method: 'POST',
+            url: "http://jobs.6degreesinc.com/jobSeeker/SearchResults.aspx",
+            dataType: 'json',
+            data : {
+                "spKeyword":search_term,
+                "RunSearch":"1",
+                "spSortOrder":"2",
+                "RecordViewCount":"1000",
+
+            },
+            success: function(data) {
+
+            },
+
+            error: function(data) {
+
+            }
+        });
 
     },
 

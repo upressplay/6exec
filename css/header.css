@@ -98,6 +98,7 @@ input {
 	line-height: 4.8rem;
 	text-align: center;
 	cursor: pointer;
+	border:0;
 }
 #search_btn:hover {
 
