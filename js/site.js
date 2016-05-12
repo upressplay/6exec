@@ -57,9 +57,6 @@ var site = {
 
         TweenMax.to($('#site_holder'), .5, {opacity:1, overwrite:2}); 
 
-        
-
-        
     	this.resize();
         
     },

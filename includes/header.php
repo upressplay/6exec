@@ -15,7 +15,7 @@
 	<div id="search_input">
 		<input id="search_position" name=spKeyword type="text" placeholder="Search by Keyword">
 	</div>
-	<button id="search_btn" class="fa fa-arrow-circle-right">
+	<button id="search_btn" type="submit" class="fa fa-arrow-circle-right">
 	</button>
 
 	<input type="hidden" name="RunSearch" value="1">

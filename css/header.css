@@ -3,9 +3,20 @@
 	float: left;
 	width:160rem;
 	height:68.6rem;
-	margin-top: 8rem;
+	margin-top: 5rem;
 	background-color: #000;
 }
+
+@media (min-width: 900px) { 
+	#home {
+		float: left;
+		width:160rem;
+		height:68.6rem;
+		margin-top: 8rem;
+		background-color: #000;
+	}
+}
+
 
 #site_logo {
 	position: absolute;
