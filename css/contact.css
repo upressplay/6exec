@@ -26,8 +26,11 @@
 }
 #contact_right {
 	float: left;
-	width: 50%;
+	width: 47%;
+	padding-left:3%;
 }
+
+
 
 
 #contact a:link {
