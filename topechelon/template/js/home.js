@@ -17,9 +17,9 @@ site.home = {
 
         $( window ).resize(function() { thisobj.resize(); });
 
-        this.data.push({img:"images/home_01.jpg", loaded:false});
-        this.data.push({img:"images/home_02.jpg", loaded:false});
-        this.data.push({img:"images/home_03.jpg", loaded:false});
+        this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_01.jpg", loaded:false});
+        this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_02.jpg", loaded:false});
+        this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_03.jpg", loaded:false});
 
         this.render();
 
@@ -40,7 +40,7 @@ site.home = {
 
     load : function () {
 
-        //site.trace(this.id+" load");
+        site.trace(this.id+" load");
 
         var thisobj = this;
 
@@ -52,7 +52,7 @@ site.home = {
             return;
         }
 
-        var photo_url = site.cdn+this.data[this.new].img;
+        var photo_url = this.data[this.new].img;
         var new_img = new Image();  
         new_img.onload = function () {   
             thisobj.img_loaded();
@@ -89,10 +89,6 @@ site.home = {
             
         }
 
-
-        
-
-        
     },
 
     prizes_holder_w : function () {
