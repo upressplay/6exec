@@ -45,17 +45,17 @@ var site = {
 
     	site.trace("site render");
 
-        $('#site_holder').css({
+        jQuery('#site_holder').css({
             "display":"block"
             });
 
-        TweenMax.set($('#site_holder'), {opacity:0}); 
+        TweenMax.set(jQuery('#site_holder'), {opacity:0}); 
 
-        $( window ).resize(function() { thisobj.resize(); });
+        jQuery( window ).resize(function() { thisobj.resize(); });
 
         site.trace("site.device = "+site.device+" site.window_width() = "+site.window_width())
 
-        TweenMax.to($('#site_holder'), .5, {opacity:1, overwrite:2}); 
+        TweenMax.to(jQuery('#site_holder'), .5, {opacity:1, overwrite:2}); 
 
         
 
@@ -146,7 +146,7 @@ var site = {
 
 		}
 
-        $('html').css({
+        jQuery('html').css({
             "font-size":this.size()+"px"
         });
     
@@ -154,12 +154,12 @@ var site = {
     },
 
     window_width : function () {
-    	var value = Math.round($('#site_holder').innerWidth());
+    	var value = Math.round(jQuery('#site_holder').innerWidth());
     	//if(value < this.max_width) value = value - 10;
     	return value;
     },
     window_height : function () {
-    	var value = Math.round($('#site_holder').innerHeight());
+    	var value = Math.round(jQuery('#site_holder').innerHeight());
     	return value;
     },
 
@@ -181,7 +181,7 @@ var site = {
     	return value;
     },
     height : function () {
-    	var value = $('#site_container').innerHeight();
+    	var value = jQuery('#site_container').innerHeight();
     	return value;
     },
 
@@ -191,7 +191,7 @@ var site = {
     },
 
     top : function () {
-        var value = $( "#site_holder" ).scrollTop();
+        var value = jQuery( "#site_holder" ).scrollTop();
         return value;
     },
 
@@ -334,14 +334,14 @@ var site = {
 
     div_display : function (id,display) {
         //site.trace("div_display id = "+id+" display = "+display)
-        $(id).css({
+        jQuery(id).css({
             "display":display
             });
     },
 
     div_remove : function (id) {
         site.trace("div_remove id = "+id)
-        $(id).remove();
+        jQuery(id).remove();
     },
 
     linkify : function (text,target) {  
@@ -355,13 +355,13 @@ var site = {
         
         site.trace("scroll_to val = "+val);
 
-        var this_position = $( val ).position();
+        var this_position = jQuery( val ).position();
         this_position = this_position.top;
         site.trace("this_position = "+this_position)
-        var current_scroll = $( '#site_holder' ).scrollTop(  );
+        var current_scroll = jQuery( '#site_holder' ).scrollTop(  );
 
-        var final_scroll = this_position+current_scroll - $('nav').height();
-        TweenMax.to($( '#site_holder' ), 1, {delay:.5, scrollTo:{y:final_scroll}, ease:"Power2.easeOut"});
+        var final_scroll = this_position+current_scroll - jQuery('nav').height();
+        TweenMax.to(jQuery( '#site_holder' ), 1, {delay:.5, scrollTo:{y:final_scroll}, ease:"Power2.easeOut"});
 
     },
 
@@ -379,7 +379,7 @@ var site = {
     }
 
 };
-$(document).ready(function(){  
+jQuery(document).ready(function(){  
 
     site.initialize();
     

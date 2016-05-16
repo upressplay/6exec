@@ -2,8 +2,8 @@
 #home {
 	float: left;
 	width:160rem;
-	height:13.5rem;
-	margin-top: 5rem;
+	height:13.5rem !important;
+	margin-top: 11rem !important;
 	background-color: #000;
 }
 
@@ -11,8 +11,8 @@
 	#home {
 		float: left;
 		width:160rem;
-		height:13.5rem;
-		margin-top: 8rem;
+		height:13.5rem !important;
+		margin-top: 8rem !important;
 		background-color: #000;
 	}
 }
@@ -21,8 +21,18 @@
 	position: absolute;
 	width: 34.5rem;
 	height:13.5rem;
-	top:1rem;
+	top:.5rem;
 	left:5rem;
+}
+
+@media (min-width: 900px) { 
+	#site_logo {
+		position: absolute;
+		width: 34.5rem;
+		height:13.5rem;
+		top:1rem;
+		left:5rem;
+	}
 }
 
 #home_holder {

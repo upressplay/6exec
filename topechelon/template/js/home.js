@@ -1,4 +1,4 @@
-$(document).ready(function(){  
+jQuery(document).ready(function(){  
 
     site.home.initialize();
     
@@ -15,7 +15,7 @@ site.home = {
 
         var thisobj = this;
 
-        $( window ).resize(function() { thisobj.resize(); });
+        jQuery( window ).resize(function() { thisobj.resize(); });
 
         this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_01.jpg", loaded:false});
         this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_02.jpg", loaded:false});
@@ -58,9 +58,9 @@ site.home = {
             thisobj.img_loaded();
         }
 
-        $('#home_anim').append('<div id="home_anim_'+this.new+'" class="home_anim"><img src="'+photo_url+'"></div>');
+        jQuery('#home_anim').append('<div id="home_anim_'+this.new+'" class="home_anim"><img src="'+photo_url+'"></div>');
 
-        TweenMax.set($('#home_anim_'+this.new), {opacity:0}); 
+        TweenMax.set(jQuery('#home_anim_'+this.new), {opacity:0}); 
 
 
         new_img.src = photo_url;
@@ -72,8 +72,8 @@ site.home = {
         this.data[this.new].loaded = true;
 
         //site.trace(this.id+" img_loaded");
-        TweenMax.to($('#home_anim_'+this.new), 1, {opacity:1, ease:"Power1.easeInOut", overwrite:2}); 
-        TweenMax.to($('#home_anim_'+this.current), 1, {opacity:0, ease:"Power1.easeInOut", overwrite:2}); 
+        TweenMax.to(jQuery('#home_anim_'+this.new), 1, {opacity:1, ease:"Power1.easeInOut", overwrite:2}); 
+        TweenMax.to(jQuery('#home_anim_'+this.current), 1, {opacity:0, ease:"Power1.easeInOut", overwrite:2}); 
         this.current = this.new;
 
         TweenMax.delayedCall(3.5, this.load, [], this);
