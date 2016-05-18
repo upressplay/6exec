@@ -17,11 +17,11 @@
 					echo '</div><!-- apply_btn -->';
 				echo '</a>';
 				echo '<div id="apply_info">';
-					echo '<div id="apply_title">';
+					echo '<div class="apply_title">';
 						echo $p['title'];
-						echo ' <span id="apply_location" class="blue_sub">' . $p['location'] . '</span>';
-					echo '</div><!-- circle_content -->';
-					echo '<div id="apply_desc" class="gray_desc">';
+					echo '</div><!-- apply_title -->';
+					echo ' <div class="blue_sub">' . $p['location'] . '</div>';
+					echo '<div class="gray_desc">';
 						echo $p['desc'];
 					echo '</div><!-- apply_desc -->';
 					echo '<div id="pay_range" class="gray_subhead">';

@@ -52,7 +52,7 @@ site.apply = {
 
         this.current = this.new;
 
-        if(this.data.length > 1) TweenMax.delayedCall(3.5, this.next, [], this);
+        if(this.data.length > 1) TweenMax.delayedCall(6, this.next, [], this);
 
     },
 
