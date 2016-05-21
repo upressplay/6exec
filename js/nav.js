@@ -8,8 +8,6 @@ site.nav = {
 
     id:"nav",
     data:[],
-    current:-1,
-    new:0,
     loading:false,
     open:false,
     scroll_urls:['http://6degreesinc.com/','http://6degreesinc.com/about/','http://6degreesinc.com/team/','http://6degreesinc.com/services/', 'http://6degreesinc.com/news/','http://6degreesinc.com/candidates/','http://6degreesinc.com/contact/'],
@@ -106,6 +104,7 @@ site.nav = {
                 href = href.replace('http://6degreesinc.com/','');
                 href = href.replace('/','');
                 this.btn_set_url(href);
+                if(site.device == "mobile") this.toggle();
                 return;
             }   
         }
@@ -161,7 +160,6 @@ site.nav = {
 
         var thisobj = this;
 
-        this.new = this.current + 1;
         if(this.open) {
             this.open = false;
             TweenMax.to($('#nav_btns_toggle'), .5, {height:'0px', ease:"Power1.easeInOut", overwrite:2}); 
