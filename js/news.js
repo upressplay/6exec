@@ -295,6 +295,8 @@ site.news = {
 
                     $('#news_article_top .news_share').append('<div entryid="'+this.data[i].id+'" type="tumblr" class="overlay_share_btn"><span class="fa fa-tumblr" aria-hidden="true" ></span><span class="screen-reader-text">Twitter</span></div>');
 
+                    $('#news_article_top .news_share').append('<div entryid="'+this.data[i].id+'" type="linkedin" class="overlay_share_btn"><span class="fa fa-linkedin" aria-hidden="true" ></span><span class="screen-reader-text">Linkedin</span></div>');
+
                      $('.overlay_share_btn').click(function(event){
                         var type = $(this).attr('type');
                         var id = $(this).attr('entryid');
@@ -348,11 +350,11 @@ site.news = {
         var i;
         for (i = 0; i < this.data.length; i++) {
             if(this.data[i].id == id) {
-                var url = site.site_url+"/"+this.id+"/"+this.data[i].id;
+                var url = "http://"+site.site_url+"/"+this.id+"/"+this.data[i].id;
                 var img = this.data[i].img;
-                var desc = this.data[i].title + " " +this.data[i].desc;   
-
-                site.share(type,id,url,img,desc);
+                var title = this.data[i].title;   
+                var desc = this.data[i].desc;  
+                site.share({type:type, id:id, url:url, img:img, title:title, desc:desc});
             }
         }
 

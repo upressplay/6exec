@@ -94,6 +94,7 @@ class json_api_sitedata_controller {
 				'title' => get_the_title(),
 				'bio' => get_field('team_bio'),
 				'position' => get_field('team_position'),
+				'link' => get_field('team_link'),
 				);
 			$data[] = $entry;
 		endwhile;

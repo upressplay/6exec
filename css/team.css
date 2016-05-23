@@ -41,3 +41,23 @@
 	font-family: Arial, san-serif;
 	margin: 2rem 0;
 }
+
+.team_link_btn {
+	color: #186693;
+	display: inline-block;
+	font-size: 4rem;
+	line-height: 5rem;
+	padding: 1rem 2rem;
+	vertical-align: middle;
+}
+
+@media (min-width: 900px) { 
+	.team_link_btn {
+		color: #186693;
+		display: inline-block;
+		font-size: 3rem;
+		line-height: 6.5rem;
+		padding:1rem 2rem;
+		vertical-align: middle;
+	}
+}

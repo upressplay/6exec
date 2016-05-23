@@ -46,6 +46,13 @@ p {
 	-webkit-margin-end: 0px;
 }
 
+img.alignright { float: right; margin: 0 0 1.5rem 1.5rem; }
+img.alignleft { float: left; margin: 0 1.5em 1.5rem 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
 @font-face {
     font-family: 'sitefont';
     src: url('fonts/EBGaramond-Regular.ttf') format('truetype');

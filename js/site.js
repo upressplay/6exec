@@ -254,50 +254,59 @@ var site = {
         
     },
 
-    share : function (type, id, url, img, desc) {
-    	site.trace("share type = "+type+" id = "+id+" url = "+url+" img = "+img+" desc = "+desc)
+    share : function (options) {
+    	site.trace("share")
+
+        for (var prop in options) {
+          this.trace("options." + prop + " = " + options[prop]);
+        }
 
     	var title = "Ready to rock? From April 4 to May 22 you can win a RockBox every time you dine at Hard Rock Cafe. Though some boxes are more epic than others, all winners will have the chance to jet around the world to the a Hard Rock destination of their choice.  ";
 
-        if(desc == "" || desc == undefined || desc == null) desc = title;
+        if(options.desc == "" || options.desc == undefined || options.desc == null) options.desc = title;
 
-        desc = desc.replace(/(<([^>]+)>)/ig,"").replace(/”/g,"").replace(/“/g,"");
+        options.desc = options.desc.replace(/(<([^>]+)>)/ig,"").replace(/”/g,"").replace(/“/g,"");
 
-        if(type == "like") {
-            site.trace("liked");
+        site.trace("desc post replace")
+
+        site.trace("options.desc = "+options.desc)
+
+        if(options.type == "linkedin") {
+            var share_url = options.url;
+            share_url = encodeURIComponent(share_url);
+            var network_url = "https://www.linkedin.com/shareArticle?mini=true&url="+share_url+"&title="+options.title+"&summary="+options.desc+"&source="+options.img;
+            window.open(network_url, "linkedin_share", "width=600, height=400");
         }
 
-        if(type == "reblog") {
-            site.trace("reblogged");
-            var reblog_url = ' https://www.tumblr.com/reblog/'+id;
-            //119552612740
-            window.open(reblog_url, "_self");
-
-        }
-
-        if(type == "instagram") {
+        if(options.type == "instagram") {
             site.trace("instagram");
         }
 
-	    if(type == "facebook") {
-	    	var share_url = url;
+	    if(options.type == "facebook") {
+	    	var share_url = options.url;
 	    	share_url = encodeURIComponent(share_url);
 	    	var network_url = "https://www.facebook.com/sharer/sharer.php?u="+share_url;
 	    	window.open(network_url, "facebook_share", "width=600, height=400");
 	    }
 
-        if(type == "tumblr") {
-            var share_url = url;
+        if(options.type == "tumblr") {
+            var share_txt = options.title+" "+options.desc;
+            var share_url = options.url;
+            var share_img = options.img;
+            share_txt = encodeURIComponent(share_txt);
             share_url = encodeURIComponent(share_url);
-            var network_url = "http://tumblr.com/widgets/share/tool?canonicalUrl="+share_url;
-            window.open(network_url, "tumblr_share", "width=600, height=400");
-        }
+            share_img = encodeURIComponent(share_img);
+            var network_url = 'https://www.tumblr.com/share/link?url='+share_url;
+            //network_url = encodeURIComponent(network_url);
+            site.trace('tumblr network_url ========= '+network_url)
+            window.open(network_url, "tumblr_share", "width=500, height=600");
 
+        }
         
 
-	    if(type == "twitter") {
-	    	var share_txt = desc;
-            var share_url = url;
+	    if(options.type == "twitter") {
+	    	var share_txt = options.title+" "+options.desc;
+            var share_url = options.url;
             site.trace('twitter share_url ========= '+share_url)
 	    	//share_url = encodeURIComponent(share_url);
 
@@ -318,16 +327,16 @@ var site = {
 	    	window.open(network_url, "twitter_share", "width=600, height=400");
 	    }
 
-	    if(type == "google") {
-	    	var share_url = url;
+	    if(options.type == "google") {
+	    	var share_url = options.url;
 	    	share_url = encodeURIComponent(share_url);
 	    	var network_url = "https://plus.google.com/share?url="+share_url;
 	    	window.open(network_url, "google_share", "width=600, height=600");
 	    }
 
-	    if(type == "pinterest") {
-            var share_txt = desc;
-	    	var share_url = url;
+	    if(options.type == "pinterest") {
+            var share_txt = options.desc;
+	    	var share_url = options.url;
 	    	site.trace("share_url = "+share_url)
 	    	share_url = encodeURIComponent(share_url);
             var network_url = "http://pinterest.com/pin/create/button/?url="+share_url+"&description="+share_txt+"&media="+img;
@@ -335,7 +344,7 @@ var site = {
 	    }
 
 
-        site.track({"share":type,"id":id, "event":"share_post"});
+        site.track({"share":options.type,"id":options.id, "event":"share_post"});
     },
 
     div_display : function (id,display) {
