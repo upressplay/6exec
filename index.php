@@ -171,7 +171,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				include 'includes/team.php';
 				include 'includes/candidates.php';
 				include 'includes/news.php';
-				include 'includes/instagram.php';
 				include 'includes/contact.php';
 
 			?>
@@ -215,7 +214,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   	<script src="/js/home.js"></script>
   	<script src="/js/services.js"></script>
   	<script src="/js/news.js"></script>
-  	<script src="/js/instagram.js"></script>
   	<script src="/js/apply.js"></script>
 </body>
 </html>
