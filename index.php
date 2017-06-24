@@ -20,7 +20,7 @@
 	$meta_img_default = $site_url . '/images/6degrees.jpg';
 	$meta_img = $meta_img_default;
 
-	$about_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/about/');
+	$about_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/about/');
 	$about_data = json_decode($about_data, true);	
 	$about_data = $about_data['data'];
 
@@ -35,19 +35,19 @@
 			$count++;
 		}
 
-	$services_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/services/');
+	$services_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/services/');
 	$services_data = json_decode($services_data, true);	
 	$services_data = $services_data['data'];
 
-	$team_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/team/');
+	$team_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/team/');
 	$team_data = json_decode($team_data, true);	
 	$team_data = $team_data['data'];
 
-	$candidates_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/candidates/');
+	$candidates_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/candidates/');
 	$candidates_data = json_decode($candidates_data, true);	
 	$candidates_data = $candidates_data['data'];
 
-	$news_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/news/');
+	$news_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/news/');
 	$news_data = json_decode($news_data, true);	
 	$news_data = $news_data['data'];
 
@@ -70,15 +70,15 @@
 
 	}
 
-	$contact_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/contact/');
+	$contact_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/contact/');
 	$contact_data = json_decode($contact_data, true);	
 	$contact_data = $contact_data['data'];
 
-	$position_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/position/');
+	$position_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/position/');
 	$position_data = json_decode($position_data, true);	
 	$position_data = $position_data['data'];
 
-	$header_data  = file_get_contents('http://6-degreesstaffing.com/6degreesinc.com/wordpress/api/sitedata/header/');
+	$header_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/header/');
 	$header_data = json_decode($header_data, true);	
 	$header_data = $header_data['data'];
 

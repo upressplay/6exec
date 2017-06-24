@@ -275,6 +275,8 @@ var site = {
             var share_url = options.url;
             share_url = encodeURIComponent(share_url);
             var network_url = "https://www.linkedin.com/shareArticle?mini=true&url="+share_url+"&title="+options.title+"&summary="+options.desc+"&source="+options.img;
+            network_url = "https://www.linkedin.com/shareArticle?mini=true&url="+share_url;
+
             window.open(network_url, "linkedin_share", "width=600, height=400");
         }
 
