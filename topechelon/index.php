@@ -53,7 +53,7 @@
 	</div><!-- site_holder -->
 
 	
-	
+	<job-board api-key="f3dab5c456e78d09"></job-board><script src="https://bb3jobboard.topechelon.com/job_board.js" type="text/javascript"></script>
 	<script src="http://6degreesinc.com/topechelon/template/js/lib/jquery-2.2.3.min.js"></script>
   	<script src="http://6degreesinc.com/topechelon/template/js/lib/TweenMax.min.js"></script>
   	

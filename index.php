@@ -164,14 +164,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		
 		<div id="site_container">
 			<?php 
-				include 'includes/header.php';
-				include 'includes/apply.php';
-				include 'includes/about.php';
-				include 'includes/services.php';
-				include 'includes/team.php';
-				include 'includes/candidates.php';
-				include 'includes/news.php';
-				include 'includes/contact.php';
+
+				if($segments[0] == "positions") {
+					include 'template/includes/header.php';
+					include 'includes/positions.php';
+				} else {
+					include 'includes/header.php';
+					include 'includes/apply.php';
+					include 'includes/about.php';
+					include 'includes/services.php';
+					include 'includes/team.php';
+					include 'includes/candidates.php';
+					include 'includes/news.php';
+					include 'includes/contact.php';	
+				}
+				
 
 			?>
 			
