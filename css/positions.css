@@ -1,0 +1,77 @@
+
+#positions {
+	float: left;
+	width: 100%;
+	background-color: #000;
+	margin-top: 0rem;
+}
+
+@media (min-width: 900px) { 
+	#positions {
+		margin-top: 0rem;
+	}
+}
+#positions_content {
+	background-color: #b8b8b8;
+	float: left;
+	width: 100%;
+	padding: 3rem 0;
+}
+
+.jb--wrapper h2 {
+	color: #0079be;
+}
+
+.jb--wrapper .jb--button {
+	background-color: #186693 !important;
+	color: #fff !important;
+}
+
+.jb--wrapper input {
+	background-color: #186693 !important;
+	color: #fff !important;
+}
+
+.jb--job-listing {
+	color: #000 !important;
+}
+
+.jb--job-listing a:link {
+	border: none;
+	color: #186693;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.jb--job-listing a:visited {
+	border: none;
+	color: #186693;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.jb--job-listing a:active {
+	border: none;
+	color: #186693;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.jb--job-listing a:hover {
+	border: none;
+	color: #fff;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.jb--wrapper .jb--date-posted {
+	color: #186693 ;
+}
+
+.jb--job-description {
+	color: #000 !important;
+}
+
+#jb-detail {
+	background-color: #b8b8b8 !important;	
+}

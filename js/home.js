@@ -17,11 +17,20 @@ site.home = {
 
         $( window ).resize(function() { thisobj.resize(); });
 
-        this.data.push({img:"/images/home_01.jpg", loaded:false});
-        this.data.push({img:"/images/home_02.jpg", loaded:false});
-        this.data.push({img:"/images/home_03.jpg", loaded:false});
+        site.trace(this.id+" segments "+site.segments[1]);
 
-        this.data = site.header_data;
+        if(site.segments[1] == "positions") {
+            this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_01.jpg", loaded:false});
+            this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_02.jpg", loaded:false});
+                this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_03.jpg", loaded:false});
+
+        } else {
+            this.data = site.header_data;   
+        }
+
+        
+
+        
         this.render();
 
 
@@ -59,7 +68,9 @@ site.home = {
             thisobj.img_loaded();
         }
 
-        $('#home_anim').append('<div id="home_anim_'+this.new+'" class="home_anim"><img src="'+photo_url+'"></div>');
+        var anim_class = "home_anim";
+        if(site.segments[1] == "positions") anim_class = "home_anim_sm";
+        $('#home_anim').append('<div id="home_anim_'+this.new+'" class="'+anim_class+'"><img src="'+photo_url+'"></div>');
 
         TweenMax.set($('#home_anim_'+this.new), {opacity:0}); 
 

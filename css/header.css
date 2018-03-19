@@ -17,6 +17,24 @@
 	}
 }
 
+#home_sm {
+	float: left;
+	width:160rem;
+	height:13.5rem;
+	margin-top: 5rem;
+	background-color: #000;
+}
+
+@media (min-width: 900px) { 
+	#home_sm {
+		float: left;
+		width:160rem;
+		height:13.5rem;
+		margin-top: 8rem;
+		background-color: #000;
+	}
+}
+
 
 #site_logo {
 	position: absolute;
@@ -24,6 +42,25 @@
 	height:22.4rem;
 	top:20rem;
 	left:5rem;
+}
+
+
+#site_logo_sm {
+	position: absolute;
+	width: 34.5rem;
+	height:13.5rem;
+	top:.5rem;
+	left:5rem;
+}
+
+@media (min-width: 900px) { 
+	#site_logo_sm {
+		position: absolute;
+		width: 34.5rem;
+		height:13.5rem;
+		top:1rem;
+		left:5rem;
+	}
 }
 
 #home_holder {
@@ -43,6 +80,12 @@
 .home_anim img{
 	width:100%;
 	height:auto;
+}
+
+.home_anim_sm {
+	position: absolute;
+	width:160rem;
+	height:13.5rem;
 }
 
 #search {

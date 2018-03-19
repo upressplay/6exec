@@ -114,6 +114,7 @@
 	<link rel="stylesheet" href="/css/apply.css">
 	<link rel="stylesheet" href="/css/about.css">
 	<link rel="stylesheet" href="/css/services.css">
+	<link rel="stylesheet" href="/css/positions.css">
 	<link rel="stylesheet" href="/css/team.css">
 	<link rel="stylesheet" href="/css/candidates.css">
 	<link rel="stylesheet" href="/css/footer.css">
@@ -158,7 +159,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 	<?php 
-		include 'includes/nav.php';
+		include 'includes/nav.min.php';
 	?>
 	<div id="site_holder">
 		
@@ -166,7 +167,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<?php 
 
 				if($segments[0] == "positions") {
-					include 'template/includes/header.php';
+					include 'includes/header_positions.php';
 					include 'includes/positions.php';
 				} else {
 					include 'includes/header.php';

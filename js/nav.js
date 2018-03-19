@@ -94,11 +94,13 @@ site.nav = {
         var i;
 
         site.track({event:'nav_click', url:href});
+
+        site.trace("site.segments[1] = "+site.segments[1])
         
         for (i = 0; i < this.scroll_urls.length; i++) {
 
             site.trace("nav_handler href = "+href+"this.scroll_urls[i] = "+this.scroll_urls[i]+" site.site_url = "+site.site_url)
-            if(href == this.scroll_urls[i] && site.site_url == "6degreesinc.com") {
+            if(href == this.scroll_urls[i] && site.site_url == "6degreesinc.com" && site.segments[1] != "positions") {
 
 
                 href = href.replace('http://6degreesinc.com/','');
