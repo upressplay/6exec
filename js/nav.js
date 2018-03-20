@@ -10,7 +10,7 @@ site.nav = {
     data:[],
     loading:false,
     open:false,
-    scroll_urls:['http://6degreesinc.com/','http://6degreesinc.com/about/','http://6degreesinc.com/team/','http://6degreesinc.com/services/', 'http://6degreesinc.com/news/','http://6degreesinc.com/candidates/','http://6degreesinc.com/contact/'],
+    scroll_urls:['http://6degreesinc.com/','/about','/team','/services','/news','/candidates','/contact'],
     initialize : function () {
 
         var thisobj = this;
@@ -78,9 +78,9 @@ site.nav = {
             });      
         }
 
-        //$('#search_btn').click(function (event){  
-          //  thisobj.search_positions();
-            //}); 
+        $('#search_btn').click(function (event){  
+           thisobj.search_positions();
+            }); 
 
         site.trace("site.segments[1] = "+site.segments[1])
         if(site.segments[1] != undefined && site.segments[1] != "") site.scroll_to('#'+site.segments[1]);
@@ -120,9 +120,15 @@ site.nav = {
 
         if(search_term == "" || search_term == undefined ) {
             return;
-            //search_term = encodeURIComponent(search_term);
-            //window.open( 'http://positions.6degreesinc.com/?search='+search_term, "_self" );
+            
         }
+
+        search_term = encodeURIComponent(search_term);
+        var search_url = '/positions#!/search?page=1&params={"keyword":"'+search_term+'"}';
+        window.open(search_url,"_self");
+
+        
+        return;
 
         $.ajax({
             method: 'POST',
