@@ -17,7 +17,7 @@
 					echo '</div><!-- apply_btn -->';
 				echo '</a>';
 				echo '<div id="apply_info">';
-					echo '<div class="apply_title">';
+					echo '<div id="apply_info">';
 						echo $p['title'];
 					echo '</div><!-- apply_title -->';
 					echo ' <div class="blue_sub">' . $p['location'] . '</div>';
