@@ -48,7 +48,7 @@
 		</div><!-- site_container -->
 
 		<?php 
-			include 'template/includes/footer.php';
+			include 'template/includes/footer.min.php';
 		?>
 	</div><!-- site_holder -->
 

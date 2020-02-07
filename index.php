@@ -187,7 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div><!-- site_container -->
 
 		<?php 
-			include 'includes/footer.php';
+			include 'includes/footer.min.php';
 		?>
 	</div><!-- site_holder -->
 
