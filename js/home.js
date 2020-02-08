@@ -19,7 +19,7 @@ site.home = {
 
         site.trace(this.id+" segments "+site.segments[1]);
 
-        if(site.segments[1] == "positions") {
+        if(site.segments[1] == "positions" || site.segments[1] == "talent") {
             this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_01.jpg", loaded:false});
             this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_02.jpg", loaded:false});
                 this.data.push({img:"http://6degreesinc.com/topechelon/template/images/home_03.jpg", loaded:false});
@@ -69,7 +69,7 @@ site.home = {
         }
 
         var anim_class = "home_anim";
-        if(site.segments[1] == "positions") anim_class = "home_anim_sm";
+        if(site.segments[1] == "positions" || site.segments[1] == "talent") anim_class = "home_anim_sm";
         $('#home_anim').append('<div id="home_anim_'+this.new+'" class="'+anim_class+'"><img src="'+photo_url+'"></div>');
 
         TweenMax.set($('#home_anim_'+this.new), {opacity:0}); 

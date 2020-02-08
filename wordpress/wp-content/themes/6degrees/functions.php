@@ -183,6 +183,27 @@ function create_site_post_types() {
 		)
 	);
 
+	register_post_type( 'talent',
+		array(
+			'labels' => array(
+				'name' => 'Talent',
+				'singular_name' => 'Talent',
+				'add_new' => 'Add Talent',
+			),
+			'public' => true,
+			'show_ui' => true,
+			'show_in_nav_menus' => false,
+			'query_var' => true,
+			'has_archive' => false,
+			'supports' => array('title','excerpt', 'thumbnail'),
+			'show_in_nav_menus' => true,
+			'can_export' => true,
+			'hierarchical' => false,
+			'exclude_from_search' => true,
+			'rewrite' => array('slug' => 'talent','with_front' => false),
+		)
+	);
+
 
 }
 

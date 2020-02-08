@@ -51,6 +51,10 @@
 	$news_data = json_decode($news_data, true);	
 	$news_data = $news_data['data'];
 
+	$talent_data  = file_get_contents('http://6degreesinc.com/wordpress/api/sitedata/talent/');
+	$talent_data = json_decode($talent_data, true);	
+	$talent_data = $talent_data['data'];
+
 
 
 	if($segments[0] == "news") {
@@ -106,7 +110,7 @@
     <meta name="twitter:image" content="{block:Photo}{PhotoURL-500}{/block:Photo}">
 
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
- 	<link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+	 <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="/css/site.css">
 	<link rel="stylesheet" href="/css/nav.css">
@@ -121,6 +125,7 @@
 	<link rel="stylesheet" href="/css/instagram.css">
 	<link rel="stylesheet" href="/css/news.css">
 	<link rel="stylesheet" href="/css/contact.css">
+	<link rel="stylesheet" href="/css/talent.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -169,6 +174,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				if($segments[0] == "positions") {
 					include 'includes/header_positions.php';
 					include 'includes/positions.php';
+				} elseif($segments[0] == "talent") {
+					
+					include 'includes/header_positions.php';
+					echo "yo";
+					include 'includes/talent.php';
 				} else {
 					include 'includes/header.php';
 					include 'includes/apply.php';

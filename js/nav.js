@@ -100,7 +100,7 @@ site.nav = {
         for (i = 0; i < this.scroll_urls.length; i++) {
 
             site.trace("nav_handler href = "+href+"this.scroll_urls[i] = "+this.scroll_urls[i]+" site.site_url = "+site.site_url)
-            if(href == this.scroll_urls[i] && site.site_url == "6degreesinc.com" && site.segments[1] != "positions") {
+            if(href == this.scroll_urls[i] && site.site_url == "6degreesinc.com" && site.segments[1] != "positions" && site.segments[1] != "talent") {
 
 
                 href = href.replace('http://6degreesinc.com/','');

@@ -228,6 +228,41 @@ class json_api_sitedata_controller {
 
 	}
 
+	public function talent () {
+
+		query_posts( array ( 'post_type' => 'talent' ) );
+
+		$data = array();
+
+		while ( have_posts() ) : the_post();
+
+			$post = get_post(get_the_ID());
+
+			$entry = array(
+				'id' => $post->post_name,
+				'img' => get_the_post_thumbnail_url( ),
+				'name' => get_the_title(),
+				'title' => get_field('title'),
+				'skills' => get_field('skills'),
+				'experience' => get_field('experience'),
+				'education' => get_field('education'),
+				'bio' => get_field('bio'),
+				'accomplishments' => get_field('accomplishments'),
+				'resume' => get_field('resume'),
+
+				);
+			$data[] = $entry;
+		endwhile;
+
+		return array(
+			'status' => 'ok',
+			'data' => $data
+		);
+
+
+
+	}
+
 	
 
 	public function getmyname() {
