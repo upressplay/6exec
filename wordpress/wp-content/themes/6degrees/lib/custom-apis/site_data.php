@@ -241,8 +241,11 @@ class json_api_sitedata_controller {
 			$entry = array(
 				'id' => $post->post_name,
 				'img' => get_the_post_thumbnail_url( ),
-				'name' => get_the_title(),
-				'title' => get_field('title'),
+				'title' => get_the_title(),
+				'position' => get_field('title'),
+				'resume-file' => get_field('resume-file'),
+				'resume' => get_field('resume'),
+				'excerpt' => get_the_excerpt( ),
 				'skills' => get_field('skills'),
 				'experience' => get_field('experience'),
 				'education' => get_field('education'),

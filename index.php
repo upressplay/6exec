@@ -175,9 +175,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					include 'includes/header_positions.php';
 					include 'includes/positions.php';
 				} elseif($segments[0] == "talent") {
-					
 					include 'includes/header_positions.php';
-					echo "yo";
 					include 'includes/talent.php';
 				} else {
 					include 'includes/header.php';
