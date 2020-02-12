@@ -28,5 +28,5 @@
     		<div class="footer_nav_btn">contact</div>
     	</a>
     </div>
-  	<div id="copyright">Six Degrees Search Inc. ©2016</div>
+  	<div id="copyright">Six Degrees Search Inc. ©2020</div>
 </footer>

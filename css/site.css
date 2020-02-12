@@ -194,6 +194,13 @@ a:hover {
 .white_txt {
 	color: #fff;
 	font-family: Arial, san-serif;
-	font-size: 2rem;
-	line-height: 3rem;
+	font-size: 3rem;
+	line-height: 5rem;
+}
+
+@media (min-width: 900px) { 
+	.white_txt {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
 }

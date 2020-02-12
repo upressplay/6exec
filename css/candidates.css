@@ -30,10 +30,16 @@
 }
 
 .candidates_desc {
-	font-size: 2rem;
-	line-height: 3.5rem;
+	font-size: 3rem;
+	line-height: 4.5rem;
 	color: #fff;
 	font-family: Arial, san-serif;
+}
+@media (min-width: 900px) { 
+	.candidates_desc {
+		font-size: 2rem;
+		line-height: 3.5rem;
+	}
 }
 
 .signature {

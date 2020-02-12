@@ -41,13 +41,9 @@
                         </h3>
                     <?php endif; ?>
                     <?php if($t['resume-file']) : ?>  
-                            <a href="<?php echo $t['resume-file']['url']; ?>  " target="_blank" class="resume"><i class="fa fa-file-text" aria-hidden="true"></i> Resume</a>
+                            <a href="<?php echo $t['resume-file']['url']; ?>  " target="_blank" class="resume"><i class="fa fa-file-text" aria-hidden="true"></i> Download Resume</a>
                         <?php endif; ?>   
-                    <?php if($t['excerpt']) : ?>
-                        <p>
-                            <?php echo $t['excerpt']; ?>    
-                        </p>
-                    <?php endif; ?>
+   
                     
                 </div>
 
